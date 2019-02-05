@@ -21,7 +21,7 @@ public class ConsumerApplication {
 		SpringApplication.run(ConsumerApplication.class, args);
 	}
 
-    @Value("${instance.name}") String instanceName;
+	@Value("${instance.name}") String instanceName;
 
 	@StreamListener
 	public void receive(@Input(Sink.INPUT) Flux<Message<PostMessage>> input) {
