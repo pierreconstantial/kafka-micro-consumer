@@ -5,7 +5,7 @@ import org.springframework.messaging.SubscribableChannel;
 
 public interface UserEventStreamSink {
 
-    String INPUT = "user-service";
+    String INPUT = "user-service-test";
 
     @Input(UserEventStreamSink.INPUT)
     SubscribableChannel input();

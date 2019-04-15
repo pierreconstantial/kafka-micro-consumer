@@ -5,8 +5,8 @@ info:
   description: This stream provide events about users.
   version: 0.0.1
   # do we need this:???
-#servers:
-#  - url: 'https://api.example.com'
+servers:
+  - url: 'user-event-stream'
 paths:
   /userCreated:
     post: # not used for generator now, we stick to http meaning or we use always get???
@@ -46,8 +46,7 @@ paths:
           content:
             application/json:
               schema:
-                items:
-                  $ref: '#/components/schemas/UserDeleted'
+                $ref: '#/components/schemas/UserDeleted'
 components:
   schemas:
     User:
