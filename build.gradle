@@ -52,8 +52,7 @@ dependencyManagement {
 task unpack(type: Copy) {
 	dependsOn bootJar
 	from(zipTree(tasks.bootJar.outputs.files.singleFile))
-	into("build/dependency")
-}
+	into("build/dependency")}
 
 docker {
 	name "pconstantial/${bootJar.baseName}"
@@ -61,6 +60,3 @@ docker {
 	buildArgs(['DEPENDENCY': "dependency"])
 }
 
-apply from: 'codegen.gradle'
-
-createCodegenConsumerTask("UserEvent")

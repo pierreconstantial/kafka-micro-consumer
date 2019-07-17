@@ -2,13 +2,9 @@ package org.pit.consumer.generated;
 
 import org.pit.consumer.generated.model.User;
 import org.pit.consumer.generated.model.UserDeleted;
-import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.Message;
-import org.springframework.messaging.handler.annotation.Headers;
 import org.springframework.messaging.handler.annotation.Payload;
-
-import java.util.Map;
 
 public interface UserEventStreamSubscriber {
 
